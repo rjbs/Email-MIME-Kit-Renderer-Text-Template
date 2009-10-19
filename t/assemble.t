@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 3;
+use Test::More tests => 4;
 
 use Email::MIME::Kit;
 
@@ -35,8 +35,15 @@ my $fail_kit = Email::MIME::Kit->new({
   source => 't/kits/fail.mkit',
 });
 
-my $email_fail;
 my $lived = eval { $fail_kit->assemble({ game => 'failing' }); 1 };
 
 ok(! $lived, "we die if the template can't be assembled");
+
+my $fail2_kit = Email::MIME::Kit->new({
+  source => 't/kits/fail2.mkit',
+});
+
+my $lived2 = eval { $fail2_kit->assemble({ game => 'failing' }); 1 };
+
+ok(! $lived2, "we die if the template can't be assembled");
 

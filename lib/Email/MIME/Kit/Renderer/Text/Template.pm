@@ -35,6 +35,8 @@ sub render  {
     BROKEN => sub { die shift },
   );
 
+  die $Text::Template::ERROR unless defined $result;
+
   return \$result;
 }
 
