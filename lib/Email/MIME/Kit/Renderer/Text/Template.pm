@@ -31,7 +31,8 @@ sub render  {
   my $result = Text::Template::fill_in_string(
     $$input_ref,
     %{ $self->{template_args} || {} },
-    HASH => $hash,
+    HASH   => $hash,
+    BROKEN => sub { die shift },
   );
 
   return \$result;
