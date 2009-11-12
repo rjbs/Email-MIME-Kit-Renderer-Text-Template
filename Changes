@@ -1,11 +1,11 @@
 Revision history for {{ $dist->name }}
 
-0.093160  2009-11-12
+1.093160  2009-11-12
           use fill_this_in instead of fill_in_string to avoid package error
 
-0.092921  2009-10-19
+1.092921  2009-10-19
           catch another class of error
 
-0.092920  2009-10-19
+1.092920  2009-10-19
           throw an exception when the template results in an error
 
