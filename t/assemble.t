@@ -12,11 +12,15 @@ my $kit = Email::MIME::Kit->new({
 my $email_1 = $kit->assemble({
   name => 'Reticulo Johnson',
   game => "eatin' pancakes",
+  postlude => '  OUT!',
 });
 
-like(
-  $email_1->body,
-  qr{\QReticulo Johnson is my name, eatin' pancakes is my game},
+
+my $body_1 = $email_1->body;
+$body_1 =~ s{[\n\r]*\z}{}g;
+is(
+  $body_1,
+  q{Reticulo Johnson is my name, eatin' pancakes is my game.  OUT!},
   "template stuff happened",
 );
 
@@ -25,9 +29,11 @@ my $email_2 = $kit->assemble({
   game => "nukin' jar cheese",
 });
 
-like(
-  $email_2->body,
-  qr{\QBryan Allen is my name, nukin' jar cheese is my game},
+my $body_2 = $email_2->body;
+$body_2 =~ s{[\n\r]*\z}{}g;
+is(
+  $body_2,
+  q{Bryan Allen is my name, nukin' jar cheese is my game.},
   "template stuff happened",
 );
 

@@ -28,7 +28,7 @@ sub render  {
     (map {; $_ => ref $args->{$_} ? $args->{$_} : \$args->{$_} } keys %$args),
   });
 
-  my $result = Text::Template::fill_in_string(
+  my $result = Text::Template->fill_this_in(
     $$input_ref,
     %{ $self->{template_args} || {} },
     HASH   => $hash,
