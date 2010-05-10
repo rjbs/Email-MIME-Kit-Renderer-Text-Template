@@ -1,5 +1,8 @@
 Revision history for {{ $dist->name }}
 
+{{$NEXT}}
+          slightly improved handling of exceptions thrown in template parts
+
 1.093160  2009-11-12
           use fill_this_in instead of fill_in_string to avoid package error
 

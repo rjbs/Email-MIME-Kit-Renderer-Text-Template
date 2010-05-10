@@ -5,5 +5,5 @@
     { "From":    "test@example.com" }
   ],
   "type": "text/plain",
-  "body": "{ if (1) { die } is my name, { $game } is my game."
+  "body": "{ die \"DEATH!\" } is my name, { $game } is my game."
 }

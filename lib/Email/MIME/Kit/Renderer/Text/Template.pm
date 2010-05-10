@@ -32,7 +32,7 @@ sub render  {
     $$input_ref,
     %{ $self->{template_args} || {} },
     HASH   => $hash,
-    BROKEN => sub { die shift },
+    BROKEN => sub { my %hash = @_; die $hash{error}; },
   );
 
   die $Text::Template::ERROR unless defined $result;
