@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}
 
 {{$NEXT}}
+
+1.101300  2010-05-10 15:13:46 America/New_York
           slightly improved handling of exceptions thrown in template parts
 
 1.093160  2009-11-12
