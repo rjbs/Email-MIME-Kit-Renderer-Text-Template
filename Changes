@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}
 
 {{$NEXT}}
+
+1.101301  2012-10-01 14:20:34 America/New_York
           allow the user to pick a Text::Template subclass
 
           add some docs.  but only some.
