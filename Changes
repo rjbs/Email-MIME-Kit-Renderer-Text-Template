@@ -1,6 +1,9 @@
 Revision history for {{ $dist->name }}
 
 {{$NEXT}}
+          allow the user to pick a Text::Template subclass
+
+          add some docs.  but only some.
 
 1.101300  2010-05-10 15:13:46 America/New_York
           slightly improved handling of exceptions thrown in template parts
