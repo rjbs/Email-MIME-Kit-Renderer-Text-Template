@@ -2,6 +2,9 @@ Revision history for {{ $dist->name }}
 
 {{$NEXT}}
 
+1.101302  2013-08-12 21:51:10 America/New_York
+          update repo and bugtracker
+
 1.101301  2012-10-01 14:20:34 America/New_York
           allow the user to pick a Text::Template subclass
 
