@@ -1,6 +1,7 @@
 Revision history for {{ $dist->name }}
 
 {{$NEXT}}
+        - update dist metadata
 
 1.101302  2013-08-12 21:51:10 America/New_York
           update repo and bugtracker
