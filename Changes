@@ -1,6 +1,7 @@
 Revision history for {{ $dist->name }}
 
 {{$NEXT}}
+        - update author contact info
 
 1.101303  2022-10-22 16:29:50-04:00 America/New_York
         - update dist metadata
